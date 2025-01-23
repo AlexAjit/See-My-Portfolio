@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-gray-300;
+  font-family: 'Inter', sans-serif;
+}
+
+.text-highlight {
+  @apply text-white font-bold;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold text-white mb-8;
+}
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
