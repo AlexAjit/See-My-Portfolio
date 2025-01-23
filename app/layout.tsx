@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     title: "Ajit Yadav Portfolio",
     description: "Explore my professional projects and expertise",
     type: "website"
-  }
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico", // Optional for Apple devices
+  },
 };
 
 export default function RootLayout({
