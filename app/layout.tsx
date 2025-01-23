@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Recommended for better readability
+import { Inter } from "next/font/google";
 import "./globals.css";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { cn } from "../lib/cn";

@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 
-// Detailed interface for project properties
 interface Project {
   title: string;
   description: string;
@@ -13,7 +12,6 @@ interface Project {
   imageUrl?: string;
 }
 
-// Project Card Component with improved typing
 const ProjectCard: React.FC<Project> = ({ 
   title, 
   description, 
@@ -58,7 +56,6 @@ const ProjectCard: React.FC<Project> = ({
 
 // Projects Section Component
 const ProjectsSection: React.FC = () => {
-  // Predefined projects with strong typing
   const projects: Project[] = [
     {
       title: "Secure-File-Sharing-AI ",
