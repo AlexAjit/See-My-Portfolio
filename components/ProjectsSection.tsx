@@ -75,14 +75,14 @@ const ProjectsSection: React.FC = () => {
       githubLink: "https://github.com/AlexAjit/Interact-UI",
       imageUrl: "/Blue_Origin1.jpg"
     },
-    {
-      title: "AI Image Generator",
-      description: "Creative image generation using machine learning models and custom prompts.",
-      technologies: ["Python", "TensorFlow", "Docker", "Flask"],
-      category: "AI/ML",
-      githubLink: "https://github.com/AlexAjit/ai-image-gen",
-      imageUrl: "/Blue_Origin1.jpg"
-    },
+    // {
+    //   title: "AI Image Generator",
+    //   description: "Creative image generation using machine learning models and custom prompts.",
+    //   technologies: ["Python", "TensorFlow", "Docker", "Flask"],
+    //   category: "AI/ML",
+    //   githubLink: "https://github.com/AlexAjit/ai-image-gen",
+    //   imageUrl: "/Blue_Origin1.jpg"
+    // },
     {
       title: "E-commerce Platform",
       description: "Feature-rich online store with payment processing and inventory management.",
@@ -95,6 +95,14 @@ const ProjectsSection: React.FC = () => {
       title: "Personal Finance Tracker",
       description: "Financial management app with visualizations and budget planning tools.",
       technologies: ["Vue.js", "Firebase", "Chart.js"],
+      category: "Frontend",
+      githubLink: "https://github.com/AlexAjit/finance-tracker",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "DataDoom",
+      description: "About Currently working on backend, and as user interaction has been done so updated also deployed for reference. will be adding up many things.",
+      technologies: ["TypeScript","Data", "AI", "Chart.js", "Next.js","API","Tailwind CSS"],
       category: "Frontend",
       githubLink: "https://github.com/AlexAjit/finance-tracker",
       imageUrl: "/Blue_Origin1.jpg"
