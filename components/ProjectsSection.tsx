@@ -149,7 +149,7 @@ const ProjectsSection: React.FC = () => {
       imageUrl: "/Blue_Origin1.jpg"
     },
     {
-      title: "Making ways to climb on FAANG",
+      title: "Crack Product Based",
       description: "Data structure and algorithm question sets to crack Product based organization",
       technologies: ["Java","C++", "Python", "JavaScript"],
       category: "DSA",
