@@ -185,7 +185,7 @@ const Header = () => {
                   href="https://github.com/AlexAjit"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-[#1DB954] text-white p-3 rounded-md"
+                  className="flex items-center justify-center space-x-2 bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-lg p-3 rounded-md"
                 >
                   <Coffee className="w-4 h-4" />
                   <span>Buy Me a Coffee</span>
