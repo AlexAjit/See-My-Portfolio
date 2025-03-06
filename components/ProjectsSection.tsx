@@ -129,7 +129,7 @@ const ProjectsSection: React.FC = () => {
                     }}
                     className={`block w-full text-left px-4 py-2 rounded-md text-sm transition-colors
                               ${activeCategory === category 
-                                ? 'bg-[#1DB954] text-white font-medium' 
+                                ? 'bg-gradient-to-r from-teal-500 to-teal-700 text-white font-medium' 
                                 : 'text-gray-300 hover:text-white hover:bg-[#282828]'}`}
                     whileHover={{ x: 4 }}
                     whileTap={{ scale: 0.98 }}
@@ -173,7 +173,7 @@ const ProjectsSection: React.FC = () => {
                   {/* Project Info */}
                   <div className="flex-1">
                     <div className="mb-4">
-                      <span className="text-sm text-[#1DB954] font-medium">{selectedProject.category}</span>
+                      <span className="text-sm text-[#0F766E] font-medium">{selectedProject.category}</span>
                       <h1 className="text-4xl font-bold mt-1">{selectedProject.title}</h1>
                     </div>
                     
@@ -207,7 +207,7 @@ const ProjectsSection: React.FC = () => {
                           href={selectedProject.liveLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] text-white px-4 py-2 rounded-full transition-colors"
+                          className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-700 text-white px-4 py-2 rounded-full transition-colors"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                         >

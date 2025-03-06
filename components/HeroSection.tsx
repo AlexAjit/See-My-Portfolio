@@ -103,7 +103,7 @@ const HeroSection = () => {
         <Link 
           href="/AjIt_Shreenath_AvalaResumeAvala.pdf"
           download
-          className="inline-block mt-6 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300"
+          className="inline-block bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-lg py-3 px-6 font-medium hover:opacity-90 transition-all duration-300"
         >
           Download Resume
         </Link>

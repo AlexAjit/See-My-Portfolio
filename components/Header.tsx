@@ -26,7 +26,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Coffee, Github, Menu, X } from 'lucide-react';
+import { Coffee, Github, Gitlab, Linkedin, Menu, Twitter, X } from 'lucide-react';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -36,12 +36,12 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Navigation links
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  // const navLinks = [
+  //   { name: 'Home', href: '#home' },
+  //   { name: 'Projects', href: '#projects' },
+  //   { name: 'About', href: '#about' },
+  //   { name: 'Contact', href: '#contact' },
+  // ];
 
   // Handle scroll event to change header appearance
   useEffect(() => {
@@ -58,7 +58,7 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-black/90 backdrop-blur-md py-3 shadow-lg' 
-          : 'bg-transparent py-5'
+          : 'bg-transparent/100 py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -76,21 +76,6 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <nav className="flex items-center space-x-6">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="text-gray-300 hover:text-white text-sm font-medium transition-all duration-200 relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#1DB954] transition-all duration-200 group-hover:w-full"></span>
-              </motion.a>
-            ))}
-          </nav>
 
           {/* Social & CTA */}
           <div className="flex items-center space-x-4">
@@ -108,13 +93,52 @@ const Header = () => {
             </motion.a>
 
             <motion.a
+              href="https://www.linkedin.com/in/ajit-yadav-6b0b77208/"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="text-gray-400 hover:text-white transition-colors duration-200"
+              whileHover={{ y: -2 }}
+            >
+              <Linkedin className='w-5 h-5' />
+            </motion.a>
+
+            <motion.a
+              href="https://github.com/AlexAjit"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="text-gray-400 hover:text-white transition-colors duration-200"
+              whileHover={{ y: -2 }}
+            >
+              <Gitlab className='w-5 h-5' />
+            </motion.a>
+
+            <motion.a
+              href="https://x.com/AjitAvala"
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="text-gray-400 hover:text-white transition-colors duration-200"
+              whileHover={{ y: -2 }}
+            >
+              <Twitter className='w-5 h-5' />
+            </motion.a>
+
+            <motion.a
               href="https://github.com/AlexAjit"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
-              className="flex items-center space-x-2 bg-gradient-to-r from-[#1DB954] to-[#1ed760] text-white px-4 py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-[#1DB954]/20"
+              className="flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-teal-700 text-white rounded-lg py-3 px-6 transition-all duration-300 shadow-lg hover:shadow-[#1DB954]/20"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -148,16 +172,6 @@ const Header = () => {
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-gray-300 hover:text-white py-2 text-sm font-medium"
-                  >
-                    {link.name}
-                  </a>
-                ))}
                 <a
                   href="https://github.com/AlexAjit"
                   target="_blank"
