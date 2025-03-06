@@ -101,7 +101,7 @@ const HeroSection = () => {
         </div>
         
         <Link 
-          href="/AjIt_Shreenath_AvalaResumeRa.pdf"
+          href="/AjIt_Shreenath_AvalaResumeAvala.pdf"
           download
           className="inline-block mt-6 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300"
         >
