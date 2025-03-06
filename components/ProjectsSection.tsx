@@ -19,7 +19,8 @@ const categories = [
   "Frontend",
   "Backend",
   "Full Stack",
-  "AI/ML"
+  "AI/ML",
+  "DSA"
 ];
 
 const containerVariants = {
@@ -53,7 +54,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Secure-File-Sharing-AI",
       description: "Secure file sharing with encryption and AI-powered protection for sensitive documents.",
-      technologies: ["Next.js", "OpenAI", "Tailwind"],
+      technologies: ["Next.js", "OpenAI", "Tailwind", "Node.js", "Express"],
       category: "Full Stack",
       githubLink: "https://github.com/AlexAjit/Secure-File-Sharing-AI",
       liveLink: "https://example.com/secure-file",
@@ -94,7 +95,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: "Personal Finance Tracker",
       description: "Financial management app with visualizations and budget planning tools.",
-      technologies: ["Vue.js", "Firebase", "Chart.js"],
+      technologies: ["React.js", "MongoDB", "Chart.js", "Tailwind CSS", "API"],
       category: "Frontend",
       githubLink: "https://github.com/AlexAjit/finance-tracker",
       imageUrl: "/Blue_Origin1.jpg"
@@ -104,7 +105,55 @@ const ProjectsSection: React.FC = () => {
       description: "About Currently working on backend, and as user interaction has been done so updated also deployed for reference. will be adding up many things.",
       technologies: ["TypeScript","Data", "AI", "Chart.js", "Next.js","API","Tailwind CSS"],
       category: "Frontend",
-      githubLink: "https://github.com/AlexAjit/finance-tracker",
+      githubLink: "https://github.com/AlexAjit/datadoom",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "AI-Summarizer",
+      description: "This application is helpful to summarize the content of any blogs or anything - through link only",
+      technologies: ["TypeScript","Data", "AI","Next.js","API","Tailwind CSS"],
+      category: "Frontend",
+      githubLink: "https://github.com/AlexAjit/ai-summarizer",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "QuickRAG-PDF-AI",
+      description: "QuickRAG will enable users to upload PDFs, extract and chunk text, generate embeddings, and store these in an in-memory vector store.",
+      technologies: ["TypeScript","Data", "AI", "Chart.js", "Next.js","API","Tailwind CSS"],
+      category: "Frontend",
+      githubLink: "https://github.com/AlexAjit/ai-summarizer",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "Dynamic PIDashboard",
+      description: "Just a demonstration of data on dashboard and added various kind of filters and main feature that user can convert that dashboard into the Power Point to demonstrate and represent anywhere.",
+      technologies: ["TypeScript","Data", "AI", "Chart.js", "Next.js","API","Tailwind CSS"],
+      category: "Frontend",
+      githubLink: "https://github.com/AlexAjit/PIDashboard",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "Play Quiz",
+      description: "A simple quiz game to check your skills, that's just a use case. Can add more questions if required, and make dynamic.",
+      technologies: ["Java","SpringBoot", "HTML", "CSS", "JavaScript","API","H2 Database"],
+      category: "Full Stack",
+      githubLink: "https://github.com/AlexAjit/PlayQuiz",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "Visualize data into structure",
+      description: "An online tree-like utility for generating ASCII folder structure diagrams.",
+      technologies: ["Java","SpringBoot", "HTML", "CSS", "JavaScript","API","H2 Database"],
+      category: "Full Stack",
+      githubLink: "https://github.com/AlexAjit/Visualize-data-tree",
+      imageUrl: "/Blue_Origin1.jpg"
+    },
+    {
+      title: "Making ways to climb on FAANG",
+      description: "Data structure and algorithm question sets to crack Product based organization",
+      technologies: ["Java","C++", "Python", "JavaScript"],
+      category: "DSA",
+      githubLink: "https://github.com/AlexAjit/DSA-FAANG",
       imageUrl: "/Blue_Origin1.jpg"
     }
   ];
