@@ -1,10 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { Coffee, Github, Gitlab, Linkedin, Menu, Twitter, X } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Coffee,
+  Github,
+  Gitlab,
+  Linkedin,
+  Menu,
+  Twitter,
+  X,
+} from "lucide-react";
+// import Avatar from "../assets/avatar.jpg";
+import avatar from "@/assets/avatar.jpg"; // Importing image
+import Image from "next/image";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,8 +27,8 @@ const Header = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -55,7 +66,6 @@ const Header = () => {
             >
               <Github className="w-5 h-5" />
             </motion.a>
-
             <motion.a
               href="https://www.linkedin.com/in/ajit-yadav-6b0b77208/"
               target="_blank"
@@ -68,7 +78,6 @@ const Header = () => {
             >
               <Linkedin className="w-5 h-5" />
             </motion.a>
-
             <motion.a
               href="https://github.com/AlexAjit"
               target="_blank"
@@ -81,7 +90,6 @@ const Header = () => {
             >
               <Gitlab className="w-5 h-5" />
             </motion.a>
-
             <motion.a
               href="https://x.com/AjitAvala"
               target="_blank"
@@ -94,7 +102,6 @@ const Header = () => {
             >
               <Twitter className="w-5 h-5" />
             </motion.a>
-
             <motion.a
               href="https://github.com/AlexAjit"
               target="_blank"
@@ -109,6 +116,20 @@ const Header = () => {
               <Coffee className="w-4 h-4" />
               <span className="text-sm font-medium">Buy Me a Coffee</span>
             </motion.a>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              className="w-10 h-10 rounded-lg border-2 border-teal-500 shadow-md overflow-hidden"
+            >
+              <Image
+                src={avatar}
+                alt="Ajit's Avatar"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+            </motion.div>
           </div>
         </div>
 
@@ -195,7 +216,7 @@ const Header = () => {
                     className="flex items-center space-x-1 text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                     whileHover={{ y: -2 }}
                   >
-                    <Twitter className="w-4 h-4" />
+                    {/* <Twitter className="w-4 h-4" /> */}
                     <span>Twitter</span>
                   </motion.a>
                 </div>
