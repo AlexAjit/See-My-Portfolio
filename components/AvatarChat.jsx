@@ -1,7 +1,7 @@
 // components/AvatarChat.jsx
 "use client"
 import { useState, useRef, useEffect } from 'react';
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/avatar1.png";
 import Image from 'next/image';
 
 const AvatarChat = () => {
