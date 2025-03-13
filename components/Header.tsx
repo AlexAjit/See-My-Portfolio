@@ -90,7 +90,7 @@ const Header = () => {
 
             {/* Book a Meeting Button */}
             <motion.a
-              href="#"
+              href="https://calendly.com/ajityadav-dev"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -196,7 +196,7 @@ const Header = () => {
 
                 {/* Book a Meeting Button */}
                 <a
-                  href="#"
+                  href="https://calendly.com/ajityadav-dev"
                   className="flex items-center justify-center bg-white text-black rounded-lg py-2 px-6 transition-all duration-300 hover:bg-gray-100 w-full max-w-[80%]"
                 >
                   <span className="text-sm font-medium">Book a Meeting</span>
