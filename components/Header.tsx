@@ -22,34 +22,43 @@ const Header = () => {
   return (
     <header
       className={`fixed top-6 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "py-4" : "py-6"
+        scrolled ? "py-6" : "py-6"
       }`}
     >
       <div
-        className={`hidden sm:block container max-w-5xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-full transition-all duration-300 ${
+        className={`hidden sm:block container max-w-4xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-full transition-all duration-300 ${
           scrolled ? "bg-black/40 shadow-lg" : "bg-black/40"
         }`}
         style={{
           backdropFilter: "blur(10px)",
           border: "1px solid",
-      borderColor: "#1a1a1a",
+          borderColor: "#1a1a1a",
         }}
       >
-        <div className="flex justify-between items-center px-6 py-6">
+        <div className="flex justify-between items-center px-0 py-2">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center"
+            className="flex items-center space-x-2"
           >
-            <div className="text-2xl font-bold text-white">AlexAjit</div>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 202 192"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m201.945 0v96h-100.972c0-53.0134 45.213-96 100.972-96zm-201.945 192c55.7594 0 100.973-42.987 100.973-96h-100.973z"></path>
+            </svg>
+            <div className="text-white text-2xl font-semibold">AlexAjit</div>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
             {/* Social Icons */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 pl-10">
               <motion.a
                 href="https://github.com/AlexAjit"
                 target="_blank"
@@ -96,14 +105,19 @@ const Header = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
-              className="flex items-center justify-center bg-white text-black rounded-lg py-2 px-6 transition-all duration-300 hover:bg-gray-100"
+              className="flex items-center justify-center bg-white text-black rounded-full py-4 px-6 transition-all duration-300 hover:bg-gray-100"
+              // className={`bg-white text-black rounded-lg py-2 px-6 transition-all duration-300 hover:bg-gray-100 ${
+              //   scrolled ? "bg-black/40 shadow-lg" : "bg-black/40"
+              // }`}
+              // style={{
+              //   backdropFilter: "blur(10px)",
+              // }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-sm font-medium">Book a Meeting</span>
+              <span className="text-base font-normal">Book a Meeting</span>
             </motion.a>
           </div>
-
         </div>
       </div>
 
@@ -117,11 +131,27 @@ const Header = () => {
           style={{
             backdropFilter: "blur(20px)",
             border: "1px solid",
-      borderColor: "#1a1a1a",
+            borderColor: "#1a1a1a",
           }}
         >
           <div className="flex items-center justify-between h-16">
-            <h1 className="text-white text-xl font-bold">AlexAjit</h1>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-2"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 202 192"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="m201.945 0v96h-100.972c0-53.0134 45.213-96 100.972-96zm-201.945 192c55.7594 0 100.973-42.987 100.973-96h-100.973z"></path>
+              </svg>
+              <div className="text-white text-xl font-semibold">AlexAjit</div>
+            </motion.div>
 
             {/* Menu Button */}
             <motion.button
