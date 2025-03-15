@@ -38,8 +38,6 @@ const Header = () => {
         <div className="flex justify-between items-center px-0 py-2">
           {/* Logo */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-2"
           >
@@ -102,8 +100,6 @@ const Header = () => {
               href="https://calendly.com/ajityadav-dev"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
               className="flex items-center justify-center bg-white text-black rounded-full py-4 px-6 transition-all duration-300 hover:bg-gray-100"
               // className={`bg-white text-black rounded-lg py-2 px-6 transition-all duration-300 hover:bg-gray-100 ${
