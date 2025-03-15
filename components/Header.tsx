@@ -35,7 +35,7 @@ const Header = () => {
           borderColor: "#1a1a1a",
         }}
       >
-        <div className="flex justify-between items-center px-0 py-2">
+        <div className="flex justify-between items-center px-0 py-3">
           {/* Logo */}
           <motion.div
             transition={{ duration: 0.5 }}
@@ -102,12 +102,6 @@ const Header = () => {
               rel="noopener noreferrer"
               transition={{ duration: 0.3, delay: 0.5 }}
               className="flex items-center justify-center bg-white text-black rounded-full py-4 px-6 transition-all duration-300 hover:bg-gray-100"
-              // className={`bg-white text-black rounded-lg py-2 px-6 transition-all duration-300 hover:bg-gray-100 ${
-              //   scrolled ? "bg-black/40 shadow-lg" : "bg-black/40"
-              // }`}
-              // style={{
-              //   backdropFilter: "blur(10px)",
-              // }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
