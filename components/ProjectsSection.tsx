@@ -302,7 +302,7 @@ const ProjectsSection: React.FC = () => {
                   >
                     <div className="text-gray-400 group-hover:text-white flex items-center justify-center w-6">
                       <span className="group-hover:hidden">{index + 1}</span>
-                      <ChevronRight size={16} className="hidden group-hover:block text-[#1DB954]" />
+                      <ChevronRight size={16} className="hidden group-hover:block text-[#0F766E]" />
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-[#333] rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
