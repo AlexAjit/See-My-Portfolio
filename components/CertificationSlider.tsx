@@ -20,30 +20,9 @@ const categories = [
   "Cloud",
   "Frontend",
   "Backend",
-  "Security"
+  "Security",
+  "AI"
 ];
-
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       staggerChildren: 0.1
-//     }
-//   }
-// };
-
-// const itemVariants = {
-//   hidden: { opacity: 0, y: 10 },
-//   visible: { 
-//     opacity: 1, 
-//     y: 0,
-//     transition: { 
-//       duration: 0.4,
-//       ease: "easeOut"
-//     }
-//   }
-// };
 
 const CertificationsSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("Cloud");
@@ -109,13 +88,13 @@ const CertificationsSection: React.FC = () => {
       imageUrl: "/k8s-cert.jpg"
     },
     {
-      title: "Certified Data Scientist",
-      description: "Validates expertise in applying statistical analysis, machine learning algorithms, and data visualization techniques to extract insights from data.",
+      title: "Certified Network Security Practitioner (CNSP)",
+      description: "Certified Network Security Practitioner (CNSP) is a certification for professionals focusing on network security, threat detection, mitigation, and best practices.",
       technologies: ["Python", "Statistics", "Machine Learning", "Data Visualization", "Pandas"],
-      category: "Data Science",
-      issuer: "DataCamp",
-      date: "2024",
-      imageUrl: "/assets/data-cert.jpg"
+      category: "Security",
+      issuer: "SecOps",
+      date: "2025",
+      imageUrl: "/secops.webp"
     },
     {
       title: "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
@@ -125,17 +104,47 @@ const CertificationsSection: React.FC = () => {
       issuer: "Oracle",
       verifyLink: "https://cloud.google.com/certification/verify",
       date: "2024",
-      imageUrl: "/oracle.png"
+      imageUrl: "/oracle-logo.jpg"
     },
     {
       title: "ManageEngine Certified Product Associate",
-      description: "Certifies the ability to design, develop, and manage robust, secure, scalable, highly available, and dynamic solutions on Google Cloud.",
+      description: "ManageEngine Certified Product Associate is a certification for proficiency in using and managing ManageEngine products effectively.",
       technologies: ["Cybersecurity ", "Risk Management", " Information Security"],
       category: "Security",
       issuer: "ManageEngine",
       verifyLink: "https://cloud.google.com/certification/verify",
       date: "2024",
-      imageUrl: "/manageengine.jpeg"
+      imageUrl: "/manageengine-logo.jpg"
+    },
+    {
+      title: "JPMorgan Chase & Co. - Cybersecurity Job Simulation",
+      description: "Over	the	period	of	September	2024,	Ajit	Yadav	has	completed	practical	tasks",
+      technologies: ["Cybersecurity ", "Risk Management", " Information Security"],
+      category: "Security",
+      issuer: "JPMorgan Chase & Co.",
+      verifyLink: "https://cloud.google.com/certification/verify",
+      date: "2024",
+      imageUrl: "/jpmorgan.jpg"
+    },
+    {
+      title: "AI Engineer Certified",
+      description: "I completed this certification by completing several tasks and by working on Training LLM models.",
+      technologies: ["Cybersecurity ", "Risk Management", " Information Security"],
+      category: "AI",
+      issuer: "Pro5.ai",
+      verifyLink: "https://cloud.google.com/certification/verify",
+      date: "2024",
+      imageUrl: "/ai.png"
+    },
+    {
+      title: "Product Associate Site24x7(SCPA)",
+      description: "I completed this certification by completing their exam, which was about log monitoring system and how ManageEngine works.",
+      technologies: ["Cybersecurity ", "Risk Management", " Information Security"],
+      category: "Security",
+      issuer: "ManageEngine",
+      verifyLink: "https://cloud.google.com/certification/verify",
+      date: "2024",
+      imageUrl: "/manageengine-logo.jpg"
     }
   ];
 
@@ -159,140 +168,168 @@ const CertificationsSection: React.FC = () => {
     }
   };
 
-  // const displayCertifications = categoryFilteredCertifications.map((cert) => ({
-  //   ...cert,
-  //   isSelected: selectedCertification?.title === cert.title
-  // }));
-
   return (
     <section className="bg-black text-white min-h-screen p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Sidebar */}
-          <div className="md:col-span-1 bg-[#121212] rounded-lg p-4">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-4">Certifications</h2>
-              <div className="space-y-2">
-                {categories.map((category) => (
-                  <div key={category} className="space-y-2">
-                    <motion.button
-                      onClick={() => handleCategoryClick(category)}
-                      className={`block w-full text-left px-4 py-2 rounded-md text-sm transition-colors
-                                ${activeCategory === category 
-                                  ? 'bg-gradient-to-r from-teal-500 to-teal-700 text-white font-medium' 
-                                  : 'text-gray-300 hover:text-white hover:bg-[#282828]'}`}
-                      whileHover={{ x: 4 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {category}
-                    </motion.button>
-                    
-                    {/* Display certification names under each category when it's active */}
-                    {activeCategory === category && (
-                      <div className="ml-4 space-y-1">
-                        {certifications
-                          .filter(cert => cert.category === category)
-                          .map((cert) => (
-                            <motion.button
-                              key={cert.title}
-                              onClick={() => setSelectedCertification(cert)}
-                              className={`block w-full text-left px-4 py-1 rounded-md text-xs transition-colors
-                                        ${selectedCertification?.title === cert.title
-                                          ? 'text-teal-400 font-medium' 
-                                          : 'text-gray-400 hover:text-white'}`}
-                              whileHover={{ x: 2 }}
-                            >
-                              {cert.title}
-                            </motion.button>
-                          ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+        <div className="bg-gradient-to-b from-[#1E1E1E] to-[#121212] rounded-lg">
+          {/* Header with category buttons */}
+          <div className="p-4 flex flex-wrap items-center justify-between border-b border-[#333]">
+            <h2 className="text-2xl font-bold">Certifications</h2>
+            
+            {/* Category buttons in top-right */}
+            <div className="flex flex-wrap gap-2 mt-2 md:mt-0">
+              {categories.map((category) => (
+                <motion.button
+                  key={category}
+                  onClick={() => handleCategoryClick(category)}
+                  className={`px-3 py-1 rounded-md text-sm transition-colors
+                            ${activeCategory === category 
+                              ? 'bg-gradient-to-r from-teal-500 to-teal-700 text-white font-medium' 
+                              : 'bg-[#222] text-gray-300 hover:text-white hover:bg-[#282828]'}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {category}
+                </motion.button>
+              ))}
             </div>
           </div>
           
-          {/* Main Content - Always shows certification details */}
-          <div className="md:col-span-3 bg-gradient-to-b from-[#1E1E1E] to-[#121212] rounded-lg">
-            {selectedCertification ? (
-              <motion.div 
-                className="p-6"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                key={selectedCertification.title} // This ensures animation runs on certification change
-              >
-                <div className="flex flex-col md:flex-row gap-6">
-                  {/* Certification Image */}
-                  <div className="w-full md:w-64 h-66 bg-[#333] rounded-lg flex-shrink-0 flex items-center justify-center overflow-hidden">
-                    {selectedCertification.imageUrl ? 
-                      <img src={selectedCertification.imageUrl} alt={selectedCertification.title} className="w-full h-full object-cover" /> :
-                      <div className="text-6xl font-bold text-gray-300">{selectedCertification.title.charAt(0)}</div>
-                    }
+          {/* Main content area */}
+          {/* <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {categoryFilteredCertifications.length > 0 ? (
+              categoryFilteredCertifications.map((cert) => (
+                <motion.div
+                  key={cert.title}
+                  className={`bg-[#1A1A1A] rounded-lg overflow-hidden cursor-pointer border border-transparent hover:border-teal-700 transition-all
+                            ${selectedCertification?.title === cert.title ? 'ring-2 ring-teal-500' : ''}`}
+                  onClick={() => setSelectedCertification(cert)}
+                  whileHover={{ y: -4 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="h-40 bg-[#222] overflow-hidden">
+                    {cert.imageUrl ? (
+                      <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-4xl font-bold text-gray-400">{cert.title.charAt(0)}</div>
+                      </div>
+                    )}
                   </div>
                   
-                  {/* Certification Info */}
-                  <div className="flex-1">
-                    <div className="mb-4">
-                      <h1 className="text-4xl font-bold mt-1">{selectedCertification.title}</h1>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <span className="text-xs text-gray-400">Issuing Organization</span>
-                        <p className="text-white">{selectedCertification.issuer}</p>
-                      </div>
-                      <div>
-                        <span className="text-xs text-gray-400">Date</span>
-                        <p className="text-white">{selectedCertification.date}</p>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-300 mb-6">{selectedCertification.description}</p>
-                    
-                    {/* <div className="mb-6">
-                      <h3 className="text-lg font-medium mb-2">Technologies</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedCertification.technologies.map((tech, idx) => (
-                          <span key={idx} className="text-sm text-gray-200 px-3 py-1 bg-[#333] rounded-full">
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div> */}
-                    
-                    <div className="flex gap-4">
-                      {selectedCertification.verifyLink && (
-                        <motion.a
-                          href={selectedCertification.verifyLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-700 text-white px-4 py-2 rounded-full transition-colors"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <ExternalLink size={18} />
-                          Upcoming
-                        </motion.a>
-                      )}
-                      <motion.button
-                        className="flex items-center gap-2 bg-[#333] hover:bg-[#444] text-white px-4 py-2 rounded-full transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        View Certificate
-                      </motion.button>
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold mb-1 line-clamp-1">{cert.title}</h3>
+                    <div className="flex justify-between text-sm text-gray-400 mb-2">
+                      <span>{cert.issuer}</span>
+                      <span>{cert.date}</span>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              ))
             ) : (
-              <div className="p-6 flex items-center justify-center h-full">
+              <div className="col-span-full flex items-center justify-center h-32">
                 <p className="text-gray-400">No certifications found for this category.</p>
               </div>
             )}
-          </div>
+          </div> */}
+          {/* Main content area */}
+<div className="p-4 flex flex-wrap gap-3">
+  {categoryFilteredCertifications.length > 0 ? (
+    categoryFilteredCertifications.map((cert) => (
+      <motion.button
+        key={cert.title}
+        className={`flex items-center gap-2 px-3 py-2 rounded-md bg-[#1A1A1A] text-sm hover:bg-[#222] transition-colors border border-transparent
+                  ${selectedCertification?.title === cert.title ? 'border-teal-700 bg-[#222]' : ''}`}
+        onClick={() => setSelectedCertification(cert)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        {/* Small certificate image/icon */}
+        <div className="w-6 h-6 rounded-full bg-[#333] overflow-hidden flex-shrink-0">
+          {cert.imageUrl ? (
+            <img src={cert.imageUrl} alt={cert.title} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-xs font-bold text-gray-400">{cert.title.charAt(0)}</div>
+            </div>
+          )}
+        </div>
+        
+        {/* Certificate title - truncated if too long */}
+        <span className="truncate max-w-[160px]">{cert.title}</span>
+      </motion.button>
+    ))
+  ) : (
+    <div className="w-full flex items-center justify-center h-32">
+      <p className="text-gray-400">No certifications found for this category.</p>
+    </div>
+  )}
+</div>
+          
+          {/* Detailed view of selected certification */}
+          {selectedCertification && (
+            <motion.div
+              className="p-6 border-t border-[#333] mt-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              key={`detail-${selectedCertification.title}`}
+            >
+              <div className="flex flex-col md:flex-row gap-6">
+                {/* Selected certification image - larger view */}
+                <div className="w-full md:w-64 h-64 bg-[#333] rounded-lg flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  {selectedCertification.imageUrl ? (
+                    <img src={selectedCertification.imageUrl} alt={selectedCertification.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="text-6xl font-bold text-gray-300">{selectedCertification.title.charAt(0)}</div>
+                  )}
+                </div>
+                
+                {/* Selected certification info */}
+                <div className="flex-1">
+                  <div className="mb-4">
+                    <h1 className="text-3xl font-bold">{selectedCertification.title}</h1>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <span className="text-xs text-gray-400">Issuing Organization</span>
+                      <p className="text-white">{selectedCertification.issuer}</p>
+                    </div>
+                    <div>
+                      <span className="text-xs text-gray-400">Date</span>
+                      <p className="text-white">{selectedCertification.date}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{selectedCertification.description}</p>
+                  
+                  <div className="flex gap-4">
+                    {selectedCertification.verifyLink && (
+                      <motion.a
+                        href={selectedCertification.verifyLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-700 text-white px-4 py-2 rounded-full transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLink size={18} />
+                        Upcoming
+                      </motion.a>
+                    )}
+                    <motion.button
+                      className="flex items-center gap-2 bg-[#333] hover:bg-[#444] text-white px-4 py-2 rounded-full transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      View Certificate
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
