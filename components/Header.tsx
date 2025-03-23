@@ -26,7 +26,7 @@ const Header = () => {
       }`}
     >
       <div
-        className={`hidden sm:block container max-w-4xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-xl transition-all duration-300 ${
+        className={`hidden sm:block container max-w-4xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-2xl transition-all duration-300 ${
           scrolled ? "bg-black/40 shadow-lg" : "bg-black/40"
         }`}
         style={{
