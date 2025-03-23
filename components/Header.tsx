@@ -26,7 +26,7 @@ const Header = () => {
       }`}
     >
       <div
-        className={`hidden sm:block container max-w-4xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-lg transition-all duration-300 ${
+        className={`hidden sm:block container max-w-4xl mx-auto px-4 md:px-6 sm:px-6 sm:py-1 rounded-xl transition-all duration-300 ${
           scrolled ? "bg-black/40 shadow-lg" : "bg-black/40"
         }`}
         style={{
@@ -101,7 +101,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               transition={{ duration: 0.3, delay: 0.5 }}
-              className="flex items-center justify-center bg-white text-black rounded-lg py-4 px-6 transition-all duration-300 hover:bg-gray-100"
+              className="flex items-center justify-center bg-white text-black rounded-md py-4 px-6 transition-all duration-300 hover:bg-gray-100"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
