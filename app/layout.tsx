@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Ajit Yadav | Software Engineer & AI Specialist",
+  title: "Ajit Yadav",
   description:
     "Portfolio showcasing projects, skills, and professional journey",
   keywords: ["Software Engineer", "AI", "Cloud Security", "Next.js"],
