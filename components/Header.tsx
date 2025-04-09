@@ -50,7 +50,7 @@ const Header = () => {
             >
               <path d="m201.945 0v96h-100.972c0-53.0134 45.213-96 100.972-96zm-201.945 192c55.7594 0 100.973-42.987 100.973-96h-100.973z"></path>
             </svg>
-            <div className="text-white text-2xl font-semibold">AlexAjit</div>
+            <div className="text-white text-2xl">Let&apos;s Solve Problems</div>
           </motion.div>
 
           {/* Desktop Navigation */}

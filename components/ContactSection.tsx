@@ -1,12 +1,11 @@
 "use client";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import React from "react";
 
 export function ContactSection() {
   return (
     <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <BackgroundBeams />
+        
       </div>
 
       <div className="max-w-2xl mx-auto p-6 relative z-10">
